@@ -3,7 +3,7 @@ a simple library for Farsi/Arabic strings written in C++
 
 ## Screenshots (using [ImGui](http://en.wikipedia.org/wiki/Kahlil_Gibran) for rendering)
 Correct Form:  
-![ScreenShot](https://raw.githubusercontent.com/AmyrAhmady/FarsiType/master/screenshots/brokenOne.png)
+![ScreenShot](https://raw.githubusercontent.com/AmyrAhmady/FarsiType/master/screenshots/correctForm.png)
   
 Broken:   
 ![ScreenShot](https://raw.githubusercontent.com/AmyrAhmady/FarsiType/master/screenshots/brokenOne.png)
