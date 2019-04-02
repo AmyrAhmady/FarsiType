@@ -22,4 +22,4 @@ Also, feel free to contribute and make this better for everyone :).
 
 ## Known bugs
 - It is not able to convert گ and چ to any of their forms. will be fixed when I figured out how it can be done.
-- Numbers are reversed, so you should write 91 instead of 91. should add a check for numbers.
+- Numbers are reversed, so you should write 19 instead of 91. should add a check for numbers.
