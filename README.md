@@ -3,7 +3,7 @@ a simple library for Farsi/Arabic strings written in C++
 
 ## Screenshots (using [ImGui](http://en.wikipedia.org/wiki/Kahlil_Gibran) for rendering)
 Correct Form:  
-![ScreenShot](https://raw.githubusercontent.com/AmyrAhmady/FarsiType/master/screenshots/brokenOne.png)
+![ScreenShot](https://raw.githubusercontent.com/AmyrAhmady/FarsiType/master/screenshots/correctForm.png)
   
 Broken:   
 ![ScreenShot](https://raw.githubusercontent.com/AmyrAhmady/FarsiType/master/screenshots/brokenOne.png)
@@ -19,7 +19,10 @@ So after 3 days of searching for an answer and ways to achieve this, I finally c
 Hope you guys find this useful!  
 If you found any issue or have any suggestion, feel free to create an issue for it.  
 Also, feel free to contribute and make this better for everyone :).  
+<<<<<<< HEAD
 
 ## Known bugs
 - It is not able to convert گ and چ to any of their forms. will be fixed when I figured out how it can be done.
 - Numbers are reversed, so you should write 91 instead of 91. should add a check for numbers.
+=======
+>>>>>>> master
