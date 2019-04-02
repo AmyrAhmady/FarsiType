@@ -1,6 +1,6 @@
 #include "FarsiType.h"
 
-std::vector<std::vector<std::string>> fa_AlphabetsAllForms =
+const std::vector<std::vector<std::string>> fa_AlphabetsAllForms =
 {
     {u8"\u0623", u8"\ufe83", u8"\u0623", u8"\ufe84", u8"\ufe84"}, // faa_ALEF_HAMZEH_ABOVE, // أ
     {u8"\u0627", u8"\ufe8d", u8"\u0627", u8"\ufe8e", u8"\ufe8e"}, // faa_ALEF, // ا
@@ -49,7 +49,7 @@ std::vector<std::vector<std::string>> fa_AlphabetsAllForms =
     {u8"\ufef7", u8"\ufef7", u8"\ufef7", u8"\ufef8", u8"\ufef8"}, // faa_LAAM_ALEF_HAMZA_ABOVE, // لأ
 };
 
-unsigned char FarsiType::GetFACharPlace(std::string fa_character, std::string prevFAChar, std::string nextFAChar)
+unsigned char FarsiType::GetFACharPlace(const std::string fa_character, const std::string prevFAChar, const std::string nextFAChar)
 {
     bool in_previous = false;
     bool in_next = false;
@@ -71,7 +71,7 @@ unsigned char FarsiType::GetFACharPlace(std::string fa_character, std::string pr
         return 0;
 }
 
-bool FarsiType::IsFACharBeginner(std::string fa_character)
+bool FarsiType::IsFACharBeginner(const std::string fa_character)
 {
     return
         fa_character == fa_AlphabetsAllForms[faa_ALEF_HAMZEH_ABOVE][faa_Unicode] ||
@@ -91,7 +91,7 @@ bool FarsiType::IsFACharBeginner(std::string fa_character)
         ;
 }
 
-unsigned char FarsiType::FindFACharIndex(std::string fa_character)
+unsigned char FarsiType::FindFACharIndex(const std::string fa_character)
 {
     for (int i = 0; i < fa_AlphabetsAllForms.size(); ++i)
     {
@@ -107,7 +107,7 @@ unsigned char FarsiType::FindFACharIndex(std::string fa_character)
     return fa_AlphabetsAllForms.size();
 }
 
-bool FarsiType::IsFAChar(std::string fa_character)
+bool FarsiType::IsFAChar(const std::string fa_character)
 {
     for (auto const& fachar : fa_AlphabetsAllForms)
     {
@@ -122,7 +122,7 @@ bool FarsiType::IsFAChar(std::string fa_character)
     return false;
 }
 
-std::vector<std::string> FarsiType::ReverseFAText(std::string str)
+std::vector<std::string> FarsiType::ReverseFAText(const std::string str)
 {
     std::vector<std::string> reversedStr;
 
@@ -149,7 +149,7 @@ std::vector<std::string> FarsiType::ReverseFAText(std::string str)
     return reversedStr;
 }
 
-std::string FarsiType::GetFACharGlyph(std::string fa_character, std::string prevFAChar, std::string nextFAChar)
+std::string FarsiType::GetFACharGlyph(const std::string fa_character, const std::string prevFAChar, const std::string nextFAChar)
 {
     if (!IsFAChar(fa_character)) return fa_character;
 
@@ -214,7 +214,7 @@ std::string FarsiType::GetFACharGlyph(std::string fa_character, std::string prev
     }
 }
 
-std::string FarsiType::ConvertToFAGlyphs(std::string text)
+std::string FarsiType::ConvertToFAGlyphs(const std::string text)
 {
     std::vector<std::string> reversed_text = ReverseFAText(text);
     std::string convertedText;
