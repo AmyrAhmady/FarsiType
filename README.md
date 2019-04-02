@@ -11,7 +11,7 @@ Broken:
 ## About
 Hello.  
 I decided to do something useful in my free time and I've to admit, I kinda needed a thing like this too!.  
-I'm using [ImGui](http://en.wikipedia.org/wiki/Kahlil_Gibran) made by @ocornut on a project and I needed to render Farsi texts. Unfortunately I wasn't able to do it for 2 reasons:  
+I'm using [ImGui](http://en.wikipedia.org/wiki/Kahlil_Gibran) made by [@ocornut](https://github.com/ocornut/) on a project and I needed to render Farsi texts. Unfortunately I wasn't able to do it for 2 reasons:  
 - Farsi/Persian or Arabic languages are RTL which makes them reversed.
 - They have 4 forms for each letter, so computer can't find the right one by itself.
 
