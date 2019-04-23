@@ -115,37 +115,37 @@ namespace FarsiType
     /// <param name="prevFAChar">Previous character, to check if its connected to fa_character or not.</param>
     /// <param name="nextFAChar">Next character, to check if its connected to fa_character or not.</param>
     /// <returns>Returns an int in type of a char. Possible values: 0- no connection, 1- conntected from behind, 2- connected from front, 3- connected from both side.</returns>
-    unsigned char GetFACharPlace(const std::string fa_character, const std::string prevFAChar, const std::string nextFAChar);
+    unsigned char GetFACharPlace(const std::string &fa_character, const std::string &prevFAChar, const std::string &nextFAChar);
 
     /// <summary>Check if given character is a Farsi/Arabic letter in beginner form or not.</summary>
     /// <param name="fa_character">Character you want to check.</param>
     /// <returns>Returns a bool value. Possible values: true, false.</returns>
-    bool IsFACharBeginner(const std::string fa_character);
+    bool IsFACharBeginner(const std::string &fa_character);
 
     /// <summary>Find vector index of the give character in fa_AlphabetsAllForms vector</summary>
     /// <param name="fa_character">Character you want get its index.</param>
     /// <returns>Returns an int in type of a char. Possible values: 0 to 44 (fa_AlphabetsAllForms array size).</returns>
-    unsigned char FindFACharIndex(const std::string fa_character);
+    unsigned char FindFACharIndex(const std::string &fa_character);
 
     /// <summary>Check if given character is a Farsi/Arabic letter or not.</summary>
     /// <param name="fa_character">Character you want to check.</param>
     /// <returns>Returns a bool value. Possible values: true, false.</returns>
-    bool IsFAChar(const std::string fa_character);
+    bool IsFAChar(const std::string &fa_character);
 
     /// <summary>Reverses Farsi/Arabic string and returns a vector of std::strings, each of them containing Farsi/Arabic letters with different byte counts.</summary>
     /// <param name="str">Farsi/Arabic string.</param>
     /// <returns>Returns a vector of std::strings.</returns>
-    std::vector<std::string> ReverseFAText(const std::string str);
+    std::vector<std::string> ReverseFAText(const std::string &str);
 
     /// <summary>Get correct unicode of Farsi/Arabic letter depending on its position, previous, and next letters.</summary>
     /// <param name="fa_character">Character you want to check.</param>
     /// <param name="prevFAChar">Previous character, to check if its connected to fa_character or not.</param>
     /// <param name="nextFAChar">Next character, to check if its connected to fa_character or not.</param>
     /// <returns>Returns a std::string.</returns>
-    std::string GetFACharGlyph(const std::string fa_character, const std::string prevFAChar, const std::string nextFAChar);
+    std::string GetFACharGlyph(const std::string &fa_character, const std::string &prevFAChar, const std::string &nextFAChar);
 
     /// <summary>Converts a Farsi/Arabic string to a normal, fixed, not-reversed string for using it in you program :).</summary>
     /// <param name="text">Farsi/Arabic text.</param>
     /// <returns>Returns a std::string. Fixed Farsi/Arabic string</returns>
-    std::string ConvertToFAGlyphs(const std::string text);
+    std::string ConvertToFAGlyphs(const std::string &text);
 };
