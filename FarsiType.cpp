@@ -39,8 +39,8 @@ const std::vector<std::vector<std::string>> fa_AlphabetsAllForms =
     {u8"\u0644", u8"\ufedd", u8"\ufedf", u8"\ufee0", u8"\ufede"}, // faa_LAAM, // ل
     {u8"\u0645", u8"\ufee1", u8"\ufee3", u8"\ufee4", u8"\ufee2"}, // faa_MEEM, // م
     {u8"\u0646", u8"\ufee5", u8"\ufee7", u8"\ufee8", u8"\ufee6"}, // faa_NOON, // ن
-    {u8"\u0648", u8"\ufeed", u8"\ufeed", u8"\ufeee", u8"\ufeee"}, // faa_VAAV, // و
     {u8"\u0647", u8"\ufee9", u8"\ufeeb", u8"\ufeec", u8"\ufeea"}, // faa_HEH, // ه
+    {u8"\u0648", u8"\ufeed", u8"\ufeed", u8"\ufeee", u8"\ufeee"}, // faa_VAAV, // و
     {u8"\u06cc", u8"\ufbfc", u8"\ufbfe", u8"\ufbff", u8"\ufbfd"}, // faa_YEH, // ی
     {u8"\u064a", u8"\ufef1", u8"\ufef3", u8"\ufef4", u8"\ufef2"}, // faa_ARABIC_YEH, // ي
     {u8"\u0649", u8"\ufeef", u8"\u0649", u8"\ufef0", u8"\ufef0"}, // faa_ALEF_MAKSURA, // ى
