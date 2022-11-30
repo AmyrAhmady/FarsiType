@@ -125,26 +125,51 @@ bool FarsiType::IsFAChar(const std::string &fa_character)
 std::vector<std::string> FarsiType::ReverseFAText(const std::string &str)
 {
     std::vector<std::string> reversedStr;
+    std::vector<std::string> tempFarsiListStr;
 
-    for (int j = str.size() - 1; j > 0; j -= 2)
+    for (int i = 0; i < str.size(); i++)
     {
-        if ((str[j] & 0xFF) <= 0x7F)
+        if (str[i] > ' ' && str[i] <= '~')
         {
-            std::string tempStr = std::string() + str[j];
-            reversedStr.insert(reversedStr.end(), tempStr);
-            j++;
-            continue;
+            if (tempFarsiListStr.size() > 0)
+            {
+                reversedStr.insert(reversedStr.end(), tempFarsiListStr.begin(), tempFarsiListStr.end());
+                tempFarsiListStr.clear();
+            }
+            reversedStr.insert(reversedStr.end(), std::string() + str[i]);
+        }
+        else if (str[i] == ' ')
+        {
+            if (tempFarsiListStr.size() > 0)
+            {
+                if (i + 1 < str.size() && str[i + 1] > '~')
+                {
+                    tempFarsiListStr.insert(tempFarsiListStr.begin(), std::string() + str[i]);
+                }
+                else
+                {
+                    tempFarsiListStr.insert(tempFarsiListStr.end(), std::string() + str[i]);
+                }
+            }
+            else
+            {
+                reversedStr.insert(reversedStr.end(), std::string() + str[i]);
+            }
+        }
+        else
+        {
+            tempFarsiListStr.insert(tempFarsiListStr.begin(), std::string() + str[i] + str[i + 1]);
+            i++;
         }
 
-        if ((str[j - 1] & 0xFF) <= 0x7F)
+        if (i == str.size() - 1)
         {
-            std::string tempStr = std::string() + str[j - 1];
-            reversedStr.insert(reversedStr.end(), tempStr);
-            j++;
-            continue;
+            if (tempFarsiListStr.size() > 0)
+            {
+                reversedStr.insert(reversedStr.end(), tempFarsiListStr.begin(), tempFarsiListStr.end());
+                tempFarsiListStr.clear();
+            }
         }
-        std::string tempStr = std::string() + str[j - 1] + str[j];
-        reversedStr.insert(reversedStr.end(), tempStr);
     }
     return reversedStr;
 }
